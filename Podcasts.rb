@@ -3,11 +3,7 @@ require 'open-uri'
 
 module Podcasts
   class Episode
-    attr_accessor :title
-    attr_accessor :author
-    attr_accessor :url
-    attr_accessor :image
-    attr_accessor :date
+    attr_accessor :title, :author, :url, :image, :date
     def initialize title:, author:, url:, image:, date:
       @title = title
       @author = author
@@ -18,11 +14,7 @@ module Podcasts
   end
 
   class Feed
-    attr_accessor :title
-    attr_accessor :author
-    attr_accessor :image
-    attr_accessor :url
-    attr_accessor :items
+    attr_accessor :title, :author, :image, :url, :items
 
     def initialize url
       @url = url
