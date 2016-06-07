@@ -45,3 +45,17 @@ class TestPodcastHardwell < Minitest::Test
       assert @feed.items.count > 0, 'there is more than one item in feed'
     end
 end
+
+class TestPodcastGroupTherapy < Minitest::Test
+    def setup
+      @feed = Podcasts::Feed.new 'http://static.aboveandbeyond.nu/grouptherapy/podcast.xml'
+    end
+
+    def test_podcast_attrs
+      assert_equal 'Above & Beyond: Group Therapy', @feed.title , 'title is correct'
+      assert_equal 'Above & Beyond', @feed.author, 'author is correct'
+      assert_equal 'http://static.aboveandbeyond.nu/assets/logos/Group_Therapy_Podcast_600x600.jpg', @feed.image ,'image url is correct'
+      assert_equal 'http://static.aboveandbeyond.nu/grouptherapy/podcast.xml', @feed.url, 'feed url is correct'
+      assert_equal @feed.items.first.image, @feed.image, 'episodes without image take the feed\'s image'
+    end
+end
