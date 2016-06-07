@@ -4,7 +4,14 @@ class PodcastsTest < Minitest::Test
   def test_that_it_has_a_version_number
     refute_nil ::Podcasts::VERSION
   end
+  
 
+end
+
+class TestUtilities < Minitest::Test
+  def test_itunes_feed_extraction
+    assert_equal 'http://feeds.99percentinvisible.org/99percentinvisible', Podcasts.get_feed_from_itunes('https://itunes.apple.com/us/podcast/99-invisible/id394775318?mt=2'), 'correct feed extracted'
+  end
 end
 
 class TestEpisode < Minitest::Test
