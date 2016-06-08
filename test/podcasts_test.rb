@@ -9,6 +9,9 @@ end
 class TestUtilities < Minitest::Test
   def test_itunes_feed_extraction
     assert_equal 'http://feeds.99percentinvisible.org/99percentinvisible', Podcasts.get_feed_from_itunes('https://itunes.apple.com/us/podcast/99-invisible/id394775318?mt=2'), 'correct feed extracted'
+
+    #TODO: get this test to pass
+    assert_equal 'http://www.galexmusic.com/podcast/gareth.xml', Podcasts.get_feed_from_itunes('https://itunes.apple.com/us/podcast/gareth-emery-electric-for/id133975014?mt=2'), 'correct feed extracted'
   end
 end
 
