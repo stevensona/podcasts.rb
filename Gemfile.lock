@@ -19,16 +19,16 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     racc (1.6.2)
-    rake (10.5.0)
+    rake (13.0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (~> 2.4)
   minitest (~> 5.0)
   podcasts!
-  rake (~> 10.0)
+  rake (~> 13.0)
 
 BUNDLED WITH
    1.11.2
