@@ -1,17 +1,34 @@
+PATH
+  remote: .
+  specs:
+    podcasts (0.0.1)
+      httparty (~> 0.13)
+      nokogiri (~> 1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    mini_portile2 (2.0.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.9.0)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    multi_xml (0.6.0)
+    nokogiri (1.14.2)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    racc (1.6.2)
+    rake (10.5.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
-  nokogiri
+  bundler (~> 1.12)
+  minitest (~> 5.0)
+  podcasts!
+  rake (~> 10.0)
 
 BUNDLED WITH
    1.11.2
